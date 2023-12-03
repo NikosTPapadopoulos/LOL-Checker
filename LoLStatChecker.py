@@ -91,11 +91,8 @@ def Scene2():
             lol_watcher = LolWatcher(str(APIKey))
             me = lol_watcher.summoner.by_name('eun1', Username)
             print(me)
-            my_ranked_stats = lol_watcher.league.by_summoner('eun1', me['id']) #na to kano na pairnei mono ta ranked
+            my_ranked_stats = lol_watcher.league.by_summoner('eun1', me['id']) 
             champMasteries = lol_watcher.champion_mastery.by_summoner('eun1', me['id'])
-            print(my_ranked_stats)
-            #print(my_ranked_stats[1]['wins']) [0] ---> Flex  [1] ---> Ranked
-            #print(champMasteries)
             n.destroy()
             Scene3()
         
